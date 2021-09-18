@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="calibration" pkg="mpc_vision" type="calibration" output="screen"/>
+
+</launch>
+

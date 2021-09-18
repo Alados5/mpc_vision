@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="node_kill_delay"  default="20.0"/>
+
+    <node name="calibration" pkg="mpc_vision" type="calibration" output="screen"/>
+    
+    <node name="update_som"
+          pkg="mpc_vision"
+          type="update_som"
+          output="screen">
+    </node>
+    
+		<node name="kill_calibration"
+		      pkg="mpc_vision"
+		      type="kill_calibration.sh"
+		      launch-prefix="bash -c 'sleep $(arg node_kill_delay); $0 $@' "/>
+
+
+</launch>
+

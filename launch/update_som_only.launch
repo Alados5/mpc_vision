@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <node name="update_som"
+          pkg="mpc_vision"
+          type="update_som"
+          output="screen">
+    </node>
+
+
+</launch>
+
